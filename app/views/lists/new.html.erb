@@ -1,0 +1,8 @@
+<h1>create new list</h1>
+
+<%= simple_form_for @list do |f| %>
+  <%= f.input_field :name, as: :string, label: 'Name of your new list' %>
+  <%= f.association :movies, label: 'Choose which movie/bookmark to add to list' %>
+  <%= f.button :submit %>
+
+<% end  %>
