@@ -21,7 +21,8 @@ class BookmarksController < ApplicationController
     redirect_to bookmarks_path(@bookmark)
   end
 
-  def bookmark_params
+  def bookmark
+    _params
     params.require(:bookmark).permit(:comment, :movie, :list)
   end
 
